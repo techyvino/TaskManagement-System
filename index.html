@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Recorder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="ct">
+        <h2>Task Records</h2>
+        <label for="task">Task:</label>
+        <input class="input" type="text" id="inp" placeholder="Enter Your Task.." required>
+        <br>
+
+        <label for="priority">Priority:</label>
+        <select class="input" name="prtopt" id="priority">
+            <option value="High" selected>High</option>
+            <option value="Medium" >Medium</option>
+            <option value="Low" >Low</option>
+        </select>
+        <br>
+
+        <span onclick="addItem()" class="add">Add</span>
+        <br>
+
+        <div class="filterList">
+            <label for="filter">Filter:</label>
+            <span class="filter" id="all" onclick="sortList('all')">ALL</span>
+            <span class="filter" id="Low" onclick="sortList('Low')">LOW</span>
+            <span class="filter" id="Medium" onclick="sortList('Medium')">MEDIUM</span>
+            <span class="filter" id="High" onclick="sortList('High')">HIGH</span>     
+        </div>
+        <div class="info"><label>Displayed tasks: <span id="inf">0</span></label></div>
+      
+    </header>
+        <div class="scr">
+            <ul id="todos">
+                <li>Add a New Task! To Complete the Tasks Just Click on Them. Edit them in the Popup Window. </li>
+            </ul>
+        </div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
